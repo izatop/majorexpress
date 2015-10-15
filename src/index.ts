@@ -61,8 +61,8 @@ export default class API {
             }
 
             for (let item of result.CitysResult.diffgram.DocumentElement.Cities) {
-                let city = /([а-яf-z0-9_-]+)\s*(\(([а-яf-z0-9_-]+)\))?/i.exec(item.CityRusName);
-                let agent = /([а-яf-z0-9_-]+)\s*/i.exec(item.AgentNameRus);
+                let city = /([а-яf-z0-9_\s\.-]+)\s*(\(([а-яf-z0-9_\s\.-]+)\))?/i.exec(item.CityRusName);
+                let agent = /([а-яf-z0-9_\s\.-]+)\s*/i.exec(item.AgentNameRus);
                 data.push(new Location({
                     code: item.CityCode,
                     city: city[1],
@@ -103,7 +103,7 @@ export default class API {
             }
 
             let item = result.Calc_torResult.diffgram.DocumentElement.MEGA_SP_Tariff_Calc_Client;
-            let city = /([а-яf-z0-9_-]+)\s*(\(([а-яf-z0-9_-]+)\))?/i.exec(item.CityRusName);
+            let city = /([а-яf-z0-9_\s\.-]+)\s*(\(([а-яf-z0-9_\s\.-]+)\))?/i.exec(item.CityRusName);
             data = new Calculation({
                 city: city[1],
                 parent: city[3] || null,
