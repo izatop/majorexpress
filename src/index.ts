@@ -2,6 +2,14 @@
 
 import {Service} from './service';
 
+const trim = (str:string):string => {
+    if (typeof str === "string") {
+        return str.replace(/^\s*/, '').replace(/\s*$/, '')
+    }
+
+    return str;
+};
+
 class Location {
     code:number;
     city:string;
@@ -13,11 +21,11 @@ class Location {
 
     constructor(item:any) {
         this.code = Number(item.code);
-        this.city = item.city;
-        this.parent = item.parent;
+        this.city = trim(item.city);
+        this.parent = trim(item.parent);
         this.agent = {
             code: Number(item.agent.code),
-            name: item.agent.name
+            name: trim(item.agent.name)
         }
     }
 }
@@ -30,8 +38,8 @@ class Calculation {
     time:number;
 
     constructor(item:any) {
-        this.city = item.city;
-        this.parent = item.parent;
+        this.city = trim(item.city);
+        this.parent = trim(item.parent);
         this.cost = Number(item.cost);
         this.insurance = Number(item.insurance);
         this.time = Number(item.time);
