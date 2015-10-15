@@ -1,6 +1,6 @@
 {
   "name": "majorexpress",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "NodeJS API for Major Express Web Service.",
   "main": "./index.js",
   "scripts": {
