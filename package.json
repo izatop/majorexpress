@@ -1,6 +1,6 @@
 {
   "name": "majorexpress",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NodeJS API for Major Express Web Service.",
   "main": "./index.js",
   "scripts": {
@@ -28,7 +28,6 @@
     "gulp-watch": "^4.3.5"
   },
   "dependencies": {
-    "easysoap": "^0.7.0",
     "soap": "^0.9.4"
   }
 }
