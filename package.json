@@ -1,0 +1,34 @@
+{
+  "name": "majorexpress",
+  "version": "0.0.1",
+  "description": "NodeJS API for Major Express Web Service.",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo 1 > /dev/null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izatop/majorexpress.git"
+  },
+  "keywords": [
+    "api",
+    "majorexpress",
+    "delivery"
+  ],
+  "author": "izatop@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/izatop/majorexpress/issues"
+  },
+  "homepage": "https://github.com/izatop/majorexpress#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-watch": "^4.3.5"
+  },
+  "dependencies": {
+    "easysoap": "^0.7.0",
+    "soap": "^0.9.4"
+  }
+}
