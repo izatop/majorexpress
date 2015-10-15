@@ -4,10 +4,10 @@
 import * as SOAP from 'soap';
 
 export class Service {
-    options:{url:string, user:string, pass:string};
+    options:{url:string, user:string, pass?:string};
     client:SOAP.SOAPClient;
 
-    constructor(options:{url:string, user:string, pass:string}) {
+    constructor(options:{url:string, user:string, pass?:string}) {
         this.options = options;
     }
 
@@ -38,11 +38,9 @@ export class Service {
      * @param parameters    Method's parameters
      * @returns {Promise<T>}
      */
-    call<T>(method:string, parameters:{[x:string]:any}):Promise<T> {
+    call<T>(method:string, parameters:{[x:string]:any} = {}):Promise<T> {
         return new Promise((resolve, reject) => {
             this.createClient().then((client) => {
-
-                console.log(require('util').inspect(client.describe(), {depth: Infinity}));
                 if (client.hasOwnProperty(method)) {
                     if (!parameters) {
                         parameters = {};
