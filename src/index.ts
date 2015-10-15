@@ -102,7 +102,6 @@ export default class API {
             WBCost: cargoCost
         }).then(result => {
             var data = null;
-            console.log(result.Calc_torResult.diffgram.DocumentElement);
             if (result.hasOwnProperty('Calc_torResult') == false
                 || result.Calc_torResult.hasOwnProperty('diffgram') === false
                 || result.Calc_torResult.diffgram.hasOwnProperty('DocumentElement') == false
